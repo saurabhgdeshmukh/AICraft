@@ -21,7 +21,7 @@ export default function ChatPage() {
   }, [router])
 
   useEffect(() => {
-    fetch('/api/messages').then(res => res.json()).then(data => setMessages(data.messages || []))
+    fetch('https://aicraft-8hlm.onrender.com/api/messages').then(res => res.json()).then(data => setMessages(data.messages || []))
   }, [])
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function ChatPage() {
     setLoading(true)
     const token = localStorage.getItem('token')
     const user = JSON.parse(localStorage.getItem('user') || '{}')
-    const res = await fetch('http://localhost:3001/api/chat', {
+    const res = await fetch('https://aicraft-8hlm.onrender.com/api/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
