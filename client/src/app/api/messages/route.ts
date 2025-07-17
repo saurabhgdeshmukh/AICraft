@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const res = await fetch('http://localhost:3001/api/messages', {
+  const res = await fetch('https://aicraft-8hlm.onrender.com/api/messages', {
     method: 'GET',
     credentials: 'include',
   })

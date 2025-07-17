@@ -4,10 +4,16 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/navigation'
 
+type Message = {
+  id: string;
+  content: string;
+  html: string;
+};
+
 export default function ChatPage() {
   const router = useRouter()
   const [prompt, setPrompt] = useState('')
-  const [messages, setMessages] = useState<any[]>([])
+  const [messages, setMessages] = useState<Message[]>([])
   const [loading, setLoading] = useState(false)
   const [preview, setPreview] = useState('')
   const [lastHtml, setLastHtml] = useState('')
