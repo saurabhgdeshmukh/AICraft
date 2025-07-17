@@ -13,7 +13,7 @@ export default function LoginPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
-    const res = await fetch('http://localhost:3001/api/auth/login', {
+    const res = await fetch('https://aicraft-8hlm.onrender.com/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })

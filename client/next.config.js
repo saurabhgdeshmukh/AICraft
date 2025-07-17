@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/api/auth/:path*',
-        destination: 'http://localhost:3001/api/auth/:path*',
+        destination: 'https://aicraft-8hlm.onrender.com/api/auth/:path*',
       },
     ];
   },
